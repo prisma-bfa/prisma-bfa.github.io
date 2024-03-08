@@ -1,7 +1,8 @@
 
 @font-face {
-  font-family: Panchang;
-  src: url(Panchang-Variable.woff2) format('woff2');
+  font-family: 'Panchang';
+  src: url('Panchang-Variable.woff2') format('woff2'),
+       url('Panchang-Variable.woff') format('woff');
 }
 
 body, html {
@@ -14,26 +15,20 @@ body, html {
 
 * {
    box-sizing: border-box;
-
 }
 
 .flex-container {
-  /* flex: 2; */
   display: flex;
   flex-direction: row;
   align-items: stretch; 
   align-content: stretch;
   height: 50%;
-
 }
 
 /*logo*/
 .flex-item-left { 
-  /* background-color: lightgray; */
   flex: 50%;
   justify-content: flex-start
-
-
 }
 
 .flex-item-left img {
@@ -44,30 +39,25 @@ body, html {
 
 /* counter */
 .flex-item-right {
-  /* background-color: darkgray; */
-
-  font-family: 'Panchang',  'Open Sans', sans-serif;
+  font-family: 'Panchang', 'Open Sans', sans-serif;
   line-height: 1;
   letter-spacing: 1rem;
   font-weight: bold;
   font-size: 1300%;
-
-
   text-align: right;
   padding: 2rem;
   flex: 50%;
-  /* align-items: center; */
-
 }
 
 .flex-item-right #counter {
   margin: 0;
 }
 
+#counter.exhibition-open {
+  font-size: 30%; 
+}
+
 /* social media bar */
-
-/* body {margin:0;height:1000px;} */
-
 .icon-bar {
   position: fixed;
   bottom: 0;
@@ -79,29 +69,29 @@ body, html {
   padding: 16px;
   transition: all 0.3s ease;
   color: #FFFBEA;
-  font-size: 30px;
+  font-size: 150%;
 }
 
-.icon-bar a.instagram:hover {
+.icon-bar .instagram:hover {
   background: #FEC20F;
   color: #2D2D2D;
 }
 
-.icon-bar a.facebook:hover {
+.icon-bar .facebook:hover {
   background: #045A70;
   color: #FFFBEA;
 }
 
-.icon-bar a.twitter:hover {
+.icon-bar .twitter:hover {
   background: #2D2D2D;
 }
 
-.icon-bar a.tiktok:hover {
+.icon-bar .tiktok:hover {
   background: #FFFBEA;
   color: #2D2D2D;
 }
 
-.icon-bar a.linktree:hover {
+.icon-bar .linktree:hover {
   background: #029B83;
   color: white;
 }
@@ -124,7 +114,6 @@ body, html {
     display: flex;
     justify-content: center;
     align-items: center;
-    /* background-color: lightgray; */
   }
 
   .flex-item-left img {
@@ -133,22 +122,27 @@ body, html {
   }
 
   .flex-item-right {
-    /* background-color: darkgray; */
     font-size: 5rem;
-    text-align: center;
+    line-height: 1.25;
+    text-align: right;
     display: flex;
     align-self: flex-end;
     position: absolute;
-    bottom: 10%;
-    padding: 1.5rem;
+    bottom: 10%; 
+    padding: 3rem;
+  }
+
+  #counter.exhibition-open {
+    font-size: 30%; 
+    text-align: right;
+    letter-spacing: 0.5rem;
   }
 
   .icon-bar {
     position: fixed;
-    display: flex; /* Change to flex to enable horizontal alignment */
+    display: flex; 
     align-items: center;
     left: 50%;
     transform: translateX(-50%);
-    
   }
 }
