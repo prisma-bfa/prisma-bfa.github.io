@@ -8,15 +8,6 @@ function closeNav() {
   document.getElementById("myNav").style.display = "none";
 }
 
-// function closeNav() {
-//     document.getElementById("myNav").style.display = "none";
-//   }
-
-// function closeNav() {
-//     var navOverlay = document.getElementById('myNav');
-//     navOverlay.style.display = 'none'; 
-//   }
-
   // Top scroll bar
   window.onscroll = function() {myFunction()};
   
@@ -26,3 +17,12 @@ function closeNav() {
     var scrolled = (winScroll / height) * 100;
     document.getElementById("myBar").style.width = scrolled + "%";
    }
+
+   //download?
+   (function() { 
+    var css = document.createElement('link'); 
+    css.href = 'https://use.fontawesome.com/releases/v5.1.0/css/all.css'; 
+    css.rel = 'stylesheet'; 
+    css.type = 'text/css'; 
+    document.getElementsByTagName('head')[0].appendChild(css); 
+})(); 
