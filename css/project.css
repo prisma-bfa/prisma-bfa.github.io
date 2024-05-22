@@ -1,0 +1,255 @@
+.white-container {
+    color: var(--clr-black);
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+  }
+  
+  .profile-layout { 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    padding: 10vw;
+  }
+  
+  .profile-layout img {
+    display: block;
+    width: auto; 
+    height: 35vh;
+  }
+
+  .profile-layout span {
+    font-family: 'Panchang';
+    font-size: larger;
+    text-transform: uppercase;
+    line-height: 1.5rem;;
+    text-align: center;
+  }
+  
+  @media screen and (min-width: 768px) { 
+    .profile-layout {
+      padding: 5vh;
+    }
+    .profile-layout img {
+      width: auto;
+      height: 55vh; 
+    }
+  }
+
+  .social-bar {
+    display: flex; 
+    align-items: center;
+  }
+  
+  .social-bar a {
+    flex: auto;
+    padding: 0 .5rem;
+    transition: all 0.3s ease;
+    color: #029B83;
+    font-size: 150%;
+  }
+
+  .social-bar a:hover {
+    color: #2D2D2D;
+  }
+
+  .bodytext-container {
+    background-color: #E01F26 ;
+    color: var(--clr-white);
+    background-image: none;
+  }
+
+  /* .statement {
+    text-align: left;
+  } */
+  
+  @media screen and (min-width: 768px) { 
+    .statement {
+      max-width: 50vw;
+      margin: 0 auto;
+      text-align: justify;
+    }
+  }
+  
+  .title-container {
+    height: 70vh;
+    background-color: #2D2D2D;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+  }
+  
+  .project-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2rem;
+    padding: 0 2rem;
+    margin: 0 auto;
+  }
+  
+  .title-project {
+    font-family: 'Panchang', 'Open Sans', sans-serif;
+    letter-spacing: 0.5rem;
+    color: var(--clr-white);
+    text-transform: uppercase;
+    /* opacity: .5; */
+    font-size: x-large;
+
+  }
+  
+  .project-section a {
+    background-color: #E01F26;
+    color: #FFFBEA;
+    text-decoration: none;
+    margin: 0 auto;
+    padding: 1rem;
+    width: 15rem;
+    border-radius: 10px;
+    filter: drop-shadow(0px 4px 5px rgba(0, 0, 0, 0.506));
+    transition: background-color 0.3s ease;
+  }
+  
+  .project-section a:hover {
+    background-color: #029B83;
+    color: #FFFBEA;
+  }
+  
+  #project-gallery {
+    grid-template-columns: repeat(1, 1fr);
+    padding-bottom: 0;
+  }
+
+  .title-project {
+    max-width: 80vw;
+  }
+  
+  @media screen and (min-width: 768px) { 
+    .title-project {
+      max-width: 50vw;
+    }
+  
+    #project-gallery {
+      padding: 0 5%;
+    }
+  }
+  
+  .project-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    filter: drop-shadow(0px 4px 5px rgba(0, 0, 0, 0.506));
+    cursor: pointer;
+  } 
+
+  .project-image {
+    transition: transform 0.5s ease-out;
+  }
+
+  .project-image:hover {
+    transform: scale(1.1);
+  }
+
+  @media screen and (min-width: 768px) { 
+    .project-image img {
+      width: 600px;
+    }   
+  }
+  
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: black;
+  }
+  
+  .modal-content {
+    position: relative;
+    margin: auto;
+    padding: 0;
+    width: 90%;
+    max-width: 1200px;
+  }
+  
+  .mySlides img {
+    object-fit: contain;
+    width: 100%;
+    height: 80vh;
+  }
+  
+  .close {
+    color: #FFFBEA;
+    position: fixed;
+    top: 10px;
+    right: 25px;
+    font-size: 2.5rem;
+    font-weight: bold;
+    transition: 0.3s ease;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #E01F26;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  /* Hide the slides by default */
+  .mySlides {
+    display: none;
+  }
+  
+  /* Next & previous buttons */
+  .prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 80%;
+    width: auto;
+    padding-inline: 2.5rem;
+    margin-top: -50px;
+    color: #FFFBEA;
+    font-weight: bold;
+    font-size: 2rem;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    -webkit-user-select: none;
+  }
+
+  @media screen and (min-width: 800px) {
+    .prev, .next {
+    top: 50%;
+    }
+  }
+  
+  /* Position the "next button" to the right */
+  .next {
+    right: 0;
+  }
+  
+  /* On hover, add a black background color with a little bit see-through */
+  .prev:hover,
+  .next:hover {
+    color: #E01F26;
+  }
+  
+  .numbertext {
+    color: #999;
+    font-size: small;
+    /* padding: 8px 12px; */
+    position: fixed;
+    top: 93%;
+    left: 47%;
+  }
