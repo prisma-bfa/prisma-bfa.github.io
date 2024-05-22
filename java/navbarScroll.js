@@ -12,7 +12,7 @@ window.addEventListener('scroll', function() {
     var scrollPosition = window.scrollY;
 
     // Check if scroll position is within the bounds of contactSection or classImageSection
-    if ((scrollPosition >= contactSectionTop && scrollPosition < contactSectionTop + contactSectionHeight)) {
+    if (scrollPosition >= contactSectionTop && scrollPosition < contactSectionTop + contactSectionHeight) {
         navbar.style.color = '#FFFBEA'; // Change text color if needed
         logoSVG.src = 'assets/logo-w.png'; // Change the image file for the SVG
         bmenu.classList.add('white-bmenu'); // Add white-bmenu class
